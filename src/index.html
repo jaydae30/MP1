@@ -5,6 +5,7 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MP1</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <header>
@@ -14,7 +15,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#video"><Video></Video></a></li>
+                    <li><a href="#video">Video</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -22,32 +23,103 @@
         </header>
 
         <section id="about">
+            <div class="container">
             <h2>About Me</h2>
-            <img src="assets/image.jpg">
+            <p>
+                My name is Jayda and im a CS + Adv major. i have a pet dog and totiose. The dogs name is Loki and the tortoise name Thrasher.
+
+            </p>
+            </div>
         </section>
 
         <section id="experience">
-            <h2>My Expiernce</h2>
+            <h2>My Experience</h2>
+            <div class="container">
+            
+            <div class="job">
+                <h3>Payroll Intern</h3>
+                <p>i work at stifel for the payroll department</p>
+            </div>
+            <div class="job">
+                <h3>Freddy's supervisor</h3>
+                <p>i work as a supervisor at freddy's steak burgerrs</p>
+            </div>
+            <div class="job">
+                <h3>Sky zone manager</h3>
+                <p>i work as a manager  at sky zone for two years</p>
+            </div>
+            </div>
         </section>
 
          <section id="projects">
             <h2>My Projects</h2>
+            <div class="container">
+            
+            
+            <div class="project-card" data-modal="modal1">
+                <h3>Survival Game</h3>
+                <p>A survival game where players gather resources, build shelter, and fend off threats to stay alive.</p>
+            </div>
+            <div class="modal" id="modal1">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Survival Game</h3>
+                    <p>A survival game built from the ground up, featuring resource gathering, crafting, and base-building mechanics. Players must manage hunger, health, and environmental threats while exploring a procedurally generated world.</p>
+                </div>
+            </div>
+
+            <div class="project-card" data-modal="modal2">
+                <h3>Meal Planner App</h3>
+                <p>An app that helps users plan meals, organize recipes, and generate grocery lists.</p>
+            </div>
+
+            <div class="modal" id="modal2">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <h3>Meal Planner App</h3>
+                    <p>A meal planning application that lets users browse recipes, build a weekly meal schedule, and automatically generate a grocery list based on selected meals. Built to simplify meal prep and reduce food waste.</p>
+                </div>
+            </div>
+            </div>
         </section>
 
          <section id="gallery">
             <h2>Gallery</h2>
+            <div class="container">
+                <div class="carousel">
+                    <div class="carousel-track">
+                        <img  src="assets/pic1.jpg" class="carousel-slide">
+                        <img  src="assets/pic2.jpg" class="carousel-slide">
+                        <img  src="assets/pic3.jpg" class="carousel-slide">
+                    </div>
+
+                    <button class="carousel-btn prev">&#10094;</button>
+                    <button class="carousel-btn next">&#10095;</button>
+                </div>
+            </div>
         </section>
 
          <section id="video">
             <h2>Videos</h2>
+            <div class="container">
+                <video controls>
+                    <source src="assets/video.mp4" type="video/mp4">
+                </video>
+            
+            </div>
         </section>
 
          <section id="contact">
+            <div class="container">
             <h2>How to reach me</h2>
+            </div>
         </section>
 
         <footer>
-            
+            <div class="social-icons">
+                <a href="https://github.com/jaydae30" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:jaydae30@icloud.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </footer>
 
         
