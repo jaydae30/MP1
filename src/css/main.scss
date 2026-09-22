@@ -109,6 +109,8 @@ html {
         font-size: 18px;
         line-height: 1.6;
         transition: transform 0.3s ease;
+        flex: 1 1 280px;
+        max-width: 320px;
         &:hover {
             
             background-color: $accent;
