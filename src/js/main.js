@@ -1,8 +1,5 @@
 /* Your JS here. */
-console.log('Hello World!')
-window.addEventListener('scroll', function() {
-  console.log('scrolled!');
-});
+
 
 const nav = document.querySelector('nav');
 const sections = document.querySelectorAll('section');
@@ -11,6 +8,17 @@ const navLinks = document.querySelectorAll('nav a');
 window.addEventListener('scroll', function() {
   const navHeight = nav.offsetHeight;
 
+  const isAtBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 5;
+  if (isAtBottom) {
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+    });
+    const contactLink = document.querySelector('nav a[href="#contact"]');
+    if (contactLink) {
+      contactLink.classList.add('active');
+    }
+    return; 
+  }
   sections.forEach(function(section) {
     const rect = section.getBoundingClientRect();
 
@@ -62,8 +70,8 @@ const nextBtn = document.querySelector('.next');
 
 let currentIndex = 0;
 
-function updateCarousel(skipTranisition) {
-  if(skipTranisition) {
+function updateCarousel(skipTransition) {
+  if(skipTransition) {
     track.style.transition = 'none';
   } else {
     track.style.transition = 'transform 0.5s ease';

@@ -1,4 +1,9 @@
 
+$bg-dark: #1a1a1a;
+$text-light: #f0f0f0;
+$accent: aqua;
+$border-color: #444;
+
 nav ul {
     display: flex;
     list-style: none;
@@ -13,7 +18,7 @@ nav a{
 }
 
 nav a.active {
-    color:aqua;
+    color: $accent;
 }
 
 nav.scrolled {
@@ -29,14 +34,14 @@ nav {
     top: 0;
     width: 100%;
     background-color: #333;
-    color: #f0f0f0;
+    color: $text-light;
     transition: padding 0.3s ease;
     padding: 20px 0;
     display: flex;
     justify-content: center;
     z-index: 1000;
-
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -53,14 +58,15 @@ h1 {
 }
 
 body {
-    background-color: #1a1a1a ;
-    color: #f0f0f0;
+    background-color: $bg-dark;
+    color: $text-light;
    
 }
 
 section {
     min-height: 100vh;
     scroll-margin-top: 80px;
+    border-bottom: 1px solid $border-color;
      h2{
         text-align: center;
      }
@@ -82,10 +88,6 @@ html {
     justify-content: center;
     min-height: 100vh;
 
-    h2 {
-        text-align: center;
-    }
-
     p {
         font-size: 18px;
         line-height: 1.6;
@@ -103,12 +105,13 @@ html {
         border-radius: 10px;
         padding: 20px;
         min-height: 50vh;
+        text-align: center;
         font-size: 18px;
         line-height: 1.6;
         transition: transform 0.3s ease;
         &:hover {
-            transform: scale(1.05);
-            background-color: aqua;
+            
+            background-color: $accent;
         }
     }
 }
@@ -146,7 +149,7 @@ html {
 
   &:hover {
     transform: scale(1.05);
-    background-color: aqua;
+    background-color: $accent;
   }
 }
 
@@ -219,7 +222,7 @@ footer {
 
         &:hover {
             transform: scale(1.2);
-            color: aqua;
+            color: $accent;
         }
     }
 }
